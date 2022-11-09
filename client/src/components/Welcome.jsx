@@ -24,10 +24,17 @@ const Input = ({ placeholder, name, type, value, handleChange, className }) => (
 
 const Welcome = () => {
 
-    const { connectWallet, currentAccount } = useContext(TransactionContext);
+    const { connectWallet, currentAccount, formData, sendTransaction, handleChange  } = useContext(TransactionContext);
 
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        const { addressTo, amount, keyword, message } = formData;
+
+        e.preventDefault();
+
+        if(!addressTo || !amount || !keyword || !message) return;
+
+        sendTransaction();
 
     }
 
@@ -107,16 +114,15 @@ const Welcome = () => {
 
                     <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
 
-                        <Input className={inputBoxDefault} placeholder='Address To' name='addressTo' type='text' handleChange={() => { }} />
-                        <Input className={inputBoxDefault} placeholder='Amount (ETH)' name='amount' type='number' handleChange={() => { }} />
-                        <Input className={inputBoxDefault} placeholder='Keyword (Gif)' name='keyword' type='text' handleChange={() => { }} />
-                        <Input className={inputBoxMessage} placeholder='Enter Message' name='message' type='text' handleChange={() => { }} />
+                        <Input className={inputBoxDefault} placeholder='Address To' name='addressTo' type='text' handleChange={handleChange} />
+                        <Input className={inputBoxDefault} placeholder='Amount (ETH)' name='amount' type='number' handleChange={handleChange} />
+                        <Input className={inputBoxDefault} placeholder='Keyword (Gif)' name='keyword' type='text' handleChange={handleChange} />
+                        <Input className={inputBoxMessage} placeholder='Enter Message' name='message' type='text' handleChange={handleChange} />
 
                         <div className='h-[1px] w-full bg-gray-400 my-2'></div>
 
                         {false ? (
                             <Loader />
-
                         ) : (
                             <button
                                 type='button'
