@@ -9,10 +9,10 @@ const Footer = () => {
                 </div>
 
                 <div className='flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full'>
-                    <p className='text-white text-base text-center mx-2 cursor-pointer'>Market</p>
-                    <p className='text-white text-base text-center mx-2 cursor-pointer'>Exchange</p>
-                    <p className='text-white text-base text-center mx-2 cursor-pointer'>Tutorials</p>
-                    <p className='text-white text-base text-center mx-2 cursor-pointer'>Wallets</p>
+                    <a href='https://instagram.com/drylest'> <p className='text-white text-base text-center mx-2 cursor-pointer'>Instagram</p> </a>
+                    <a href='https://twitter.com/drylest'> <p className='text-white text-base text-center mx-2 cursor-pointer'>Twitter</p> </a>
+                    <a href='https://youtube.com/drylast'> <p className='text-white text-base text-center mx-2 cursor-pointer'>YouTube</p> </a>
+                    <a href='https://aashiqumar.com'> <p className='text-white text-base text-center mx-2 cursor-pointer'>Developer Site</p> </a>
                 </div>
             </div>
 
@@ -24,7 +24,7 @@ const Footer = () => {
             <div className='sm:w-[90%] w-full h-[0.25px] bg-gray-400 mt-5'/>
 
             <div className='sm:w-[90%] w-full flex justify-between items-center mt-3'>
-                <p className='text-white text-sm text-center'>Drylest 2022</p>
+                <p className='text-white text-sm text-center'>Drylest 2022 by Aashiq Umar</p>
                 <p className='text-white text-sm text-center'>All rights reserved</p>
             </div>
             

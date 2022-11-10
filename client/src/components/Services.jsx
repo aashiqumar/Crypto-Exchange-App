@@ -37,15 +37,15 @@ const Services = () => {
                 <ServiceCard 
                     color = 'bg-[#8945F8]'
                     title = "Best Exchange Rates"
-                    icon = {<BsShieldFillCheck fontSize={21} className="text-white" />}
-                    subtitle = "Security is Guranteed. We always maintain privacy and qulity of our products"
+                    icon = {<BiSearchAlt fontSize={21} className="text-white" />}
+                    subtitle = "Security is Guranteed and also we got the best exchange rates for our users"
                 />
 
                 <ServiceCard 
                     color = 'bg-[#F84550]'
-                    title = "Best Exchange Rates"
-                    icon = {<BsShieldFillCheck fontSize={21} className="text-white" />}
-                    subtitle = "Security is Guranteed. We always maintain privacy and qulity of our products"
+                    title = "Fast Transactions"
+                    icon = {<RiHeart2Fill fontSize={21} className="text-white" />}
+                    subtitle = "Way faster transactions, processed within in a minute. Easy Transfer process"
                 />
             </div>
         </div>

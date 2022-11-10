@@ -4,6 +4,7 @@ import { TransactionContext } from '../context/TransactionContext';
 import dummyData from '../utils/dummyData';
 import { shortenAddress } from '../utils/shortenAddress';
 import useFetch from '../hooks/useFetch';
+import { SiEthereum } from 'react-icons/si';
 
 const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, amount, url }) => {
 
@@ -16,7 +17,7 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
                 2xl:max-w-[500px]
                 sm:min-w-[270px]
                 sm:max-w-[300px]
-                flex-col p-3 rounded-md hover:shadow-2xl
+                flex-col p-3 rounded-2xl hover:shadow-2xl
         '
         >
             <div className='flex flex-col items-center w-full mt-3'>
@@ -39,12 +40,36 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
                     )}
 
                     
+
+                    
+
+                        <a href={`https://goerli.etherscan.io/address/${addressTo}`} target='_blank' rel='noopener noreferrer'>
+                            <button 
+                                type='button' 
+                                className='flex flex-row justify-center items-center my-5 bg-[#0aba22] p-3 cursor-pointer hover:bg-[#2546bd] rounded-md'>
+
+                                    <div className='flex flex-row'>
+                                        
+                                        <div className='w-7 h-7 rounded-full border-2 border-white flex justify-center items-center'>
+                                            < SiEthereum fontSize={15} color="#fff" /> 
+                                        </div>
+                                        
+                                        
+                                        <p className='text-white text-base font-semibold flex-row pl-2'>Etherscan</p>
+
+                                    </div>
+
+                                    
+                            </button> 
+                        </a>
+
+                    
                 </div>
 
                 <img 
                         src={gifUrl || url}
-                        alt = "gif"
-                        className="w-full h-64 2x:h-96 rounded-md shadow-lg object-cover"
+                        alt = "nature"
+                        className="w-full h-64 2x:h-96 rounded-xl shadow-lg object-cover"
                     />
 
                     <div className='bg-black p-3 px-5 w-max rounded-3xl -mt-5 shadow-2xl'>

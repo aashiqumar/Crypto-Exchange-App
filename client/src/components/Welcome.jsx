@@ -39,6 +39,8 @@ const Welcome = () => {
 
     }
 
+   
+
     return (
         <div className='flex w-full justify-center items-center'>
             <div className='flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4'>
@@ -58,6 +60,15 @@ const Welcome = () => {
                             onClick={connectWallet} 
                             className='flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]'>
                                 <p className='text-white text-base font-semibold'> Connect Wallet</p>
+                        </button> 
+                    )}
+
+                    {currentAccount && (
+                        <button 
+                            type='button' 
+                            onClick={connectWallet} 
+                            className='flex flex-row justify-center items-center my-5 bg-[#0aba22] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]'>
+                                <p className='text-white text-base font-semibold'> Wallet Connected ✅</p>
                         </button> 
                     )}
 
